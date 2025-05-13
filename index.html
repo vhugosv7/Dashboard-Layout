@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABI//8ASP//AEj//wBI//8ASP//AEj//wBI//8ASP//AEj//wBI//8ASP//AEj//wAAAAAAAAAAAAAAAAAAAAAASP//AEj//wBI//8ASP//AEj//wBI//8ASP//AEj//wBI//8ASP//AEj//wBI//8ASP//AAAAAAAAAAAAAAAAAEj//wBI//+Pj4+Qj4+PkI+Pj5CPj4+Qj4+PkI+Pj5CPj4+Qj4+PkI+Pj5CPj4+QAEj//wBI//8AAAAAAAAAAABI//8ASP//j4+PkP///////////////////////////////////////////////wBI//8ASP//AAAAAAAAAAAASP//AEj//4+Pj5D/////Mo8A//////8AgP///////+OrKf//////AAD///////8ASP//AEj//wAAAAAAAAAAAEj//wBI//+Pj4+Q/////zKPAP//////AID////////jqyn//////wAA////////AEj//wBI//8AAAAAAAAAAABI//8ASP//j4+PkP////8yjwD//////wCA////////46sp//////8AAP///////wBI//8ASP//AAAAAAAAAAAASP//AEj//4+Pj5D/////Mo8A//////8AgP//////////////////AAD///////8ASP//AEj//wAAAAAAAAAAAEj//wBI//+Pj4+Q////////////////AID//////////////////wAA////////AEj//wBI//8AAAAAAAAAAABI//8ASP//j4+PkP///////////////wCA//////////////////8AAP///////wBI//8ASP//AAAAAAAAAAAASP//AEj//4+Pj5D/////////////////////////////////////AAD///////8ASP//AEj//wAAAAAAAAAAAEj//wBI//+Pj4+Q////////////////////////////////////////////////AEj//wBI//8AAAAAAAAAAAAAAAAASP//AEj//wBI//8ASP//AEj//wBI//8ASP//AEj//wBI//8ASP//AEj//wBI//8ASP//AAAAAAAAAAAAAAAAAAAAAABI//8ASP//AEj//wBI//8ASP//AEj//wBI//8ASP//AEj//wBI//8ASP//AEj//wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAIAHAACAAwAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAIABAACAAQAAgAEAAMABAADgAQAA//8AAA==" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="styles/dashboard_styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <title>Dashboard design</title>
+</head>
+<body>
+  
+    <div class="dash">
+    <nav class="left-menu">
+      <div class="logo">
+        <img src="logo.svg" alt="logo" class="logo-bar">
+      </div>
+        <a href="#"><i class="fa fa-home fa-2x" aria-hidden="true"></i>Home</a>
+        <a href="#"><i class="fa fa-calendar fa-2x " aria-hidden="true"></i>Calendar</a>
+        <a href="#"><i class="fa fa-pie-chart fa-2x " aria-hidden="true"></i>Reports</a>
+        <a href="#"><i class="fa fa-table fa-2x " aria-hidden="true"></i>Dashboard</a>
+        <a href="#"><i class="fa fa-users fa-2x" aria-hidden="true"></i>Contacts</a>
+        <button type="button" class="entry-button "><i class="fa fa-plus-square-o fa-2x" aria-hidden="true"></i>Add new entry</button>
+    </nav>
+
+    <div class="main-content">
+        <nav class="nav-bar">
+            <p class="nav-name">Peter Parker</p>
+           <img src="icons/tenor.jpg" alt="profile" class="icon-menu" >
+        </nav>
+        <div class="stats">
+            
+            <div class="sales-card">
+                <p class="stats-numbers">3450</p>
+                <p class="stats-title">Number of Sales</p>
+                <p class="stats-percentage">+25%<i class="fa fa-line-chart fa fa-2x" aria-hidden="true"></i></p>
+                
+            </div>
+            <div class="sales-card">
+                <p class="stats-numbers">$35,256</p>
+                <p class="stats-title">Sales Revenue</p>
+                <p class="stats-percentage">+15%<i class="fa fa-bar-chart fa fa-2x" aria-hidden="true"></i></p>
+            </div>
+
+            <div class="sales-card">
+                <p class="stats-numbers">$35,256</p>
+                <p class="stats-title">Average Price</p>
+                <p class="stats-percentage">+5%<i class="fa fa-usd fa fa-2x" aria-hidden="true"></i></p>
+            </div>
+
+            <div class="sales-card">
+                <p class="stats-numbers">15,893</p>
+                <p class="stats-title">Operations</p>
+                <p class="stats-percentage">+20%<i class="fa fa-bar-chart fa fa-2x" aria-hidden="true"></i></p>
+                
+            </div>
+        </div>
+
+        <div class="section-order">
+            <div class="tables">
+                <canvas id="myChartbar" class="myChartbar"></canvas>
+                <div class="tables-2">
+                    <canvas id="myChart2" class="myChart2" ></canvas>
+                    <div id="myPlot2" class="myPlot2"></div>
+                  </div>
+            </div>
+    
+            <nav class="nav-notes">
+                <div class="date">
+                  <p>Today is: <span id="current-date"></span></p>
+                </div>
+    
+                <div class="headlines">
+                    <i class="fa fa-arrow-up fa fa-2x incoming" aria-hidden="true"></i>
+                    <p>Incoming Transfer</p>
+                    <p >Portugal</p>
+                </div>
+
+                <div class="headlines">
+                    <i class="fa fa-arrow-down fa fa-2x sales" aria-hidden="true"></i>
+                    <p>Sales Report</p>
+                    <p >Argentina</p>
+                </div>
+
+                <div class="headlines">
+                    <i class="fa fa-arrow-up fa fa-2x incoming" aria-hidden="true"></i>
+                    <p>Incoming Transfer</p>
+                    <p >USA</p>
+                </div>
+    
+                <div class="headlines">
+                    <i class="fa fa-arrow-down fa fa-2x sales" aria-hidden="true"></i>
+                    <p>Sales Report</p>
+                    <p >France</p>
+    
+                </div>
+            </nav>
+
+        </div>
+
+      </div>
+</div>
+
+<script>
+    const xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+    const yValues = [55, 49, 44, 24, 15];
+    const barColors = ["red", "green","blue","orange","brown"];
+    
+    new Chart("myChartbar", {
+      type: "bar",
+      data: {
+        labels: xValues,
+        datasets: [{
+          backgroundColor: barColors,
+          data: yValues
+        }]
+      },
+      options: {
+        legend: {display: false},
+        scales: {
+          yAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
+        },
+    
+        title: {
+          display: true,
+          text: "World Wine Production 2025"
+        }
+      }
+    });
+    
+    </script>
+
+<script>
+    const xValues2 = ["Italy", "France", "Spain", "USA", "Argentina"];
+    const yValues2 = [55, 49, 44, 24, 15];
+    const barColors2 = [
+      "#b91d47",
+      "#00aba9",
+      "#2b5797",
+      "#e8c3b9",
+      "#1e7145"
+    ];
+    
+    new Chart("myChart2", {
+      type: "doughnut",
+      data: {
+        labels: xValues2,
+        datasets: [{
+          backgroundColor: barColors2,
+          data: yValues2
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: "World Wide Wine Production 2025"
+        }
+      }
+    });
+    </script>
+
+
+<script>
+    const xArray2 = [50,60,70,80,90,100,110,120,130,140,150];
+    const yArray2 = [7,8,8,9,9,9,10,11,14,14,15];
+    
+    // Define Data
+    const data2 = [{
+      x: xArray2,
+      y: yArray2,
+      mode:"lines"
+    }];
+    
+    // Define Layout
+    const layout2 = {
+      xaxis: {range: [40, 160], title: "Square Meters"},
+      yaxis: {range: [5, 16], title: "Price in Millions"},  
+      title: "House Prices vs. Size"
+    };
+    
+    // Display using Plotly
+    Plotly.newPlot("myPlot2", data2, layout2);
+    </script>
+
+<script>
+
+  const date = new Date();
+
+  let day = date.getDate();
+  let month = date.getMonth() + 1;
+  let year = date.getFullYear();
+
+  // This arrangement can be altered based on how we want the date's format to appear.
+  
+
+  const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+  const d = new Date();
+  let month_str = months[d.getMonth()];
+  let currentDate = `${day} ${month_str}, ${year}`;
+  
+    document.getElementById("current-date").textContent = currentDate ;
+</script>
+
+</body>
+</html>

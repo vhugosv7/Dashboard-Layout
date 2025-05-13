@@ -1,0 +1,336 @@
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+/*Main container*/
+.dash{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+   
+}
+
+/***---LEFT MENU STYLES---***/
+
+/*Left side menu with five items and one button*/
+.left-menu{
+    background-color: #35495e;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    position:fixed;
+    width: 15%;
+}
+
+
+/*Logo at the top of the left menu*/
+.logo img{
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+}
+
+/*Left menu item styles*/
+.left-menu a{
+    align-items:center;
+    color: #ffffff;
+    display: flex;
+    font-size: 15px;
+    padding: 30px;
+    text-align: left;
+    text-decoration: none;
+}
+
+.left-menu a i{
+    width: 4rem;
+}
+
+.left-menu a:hover{
+    background-color: #799379;
+    color: rgb(35,187,155);
+}
+
+.left-menu a:active{
+    background-color: #14534c;
+}
+
+
+/*Bottom button style in left menu*/
+.entry-button{
+    align-items: center;
+    background-color: #20bc9c;
+    border-radius: 7px;
+    color: #35495e;
+    display: flex;
+    flex-wrap: wrap;
+    font-weight: 900;
+    margin: 0 auto;
+    padding: 10px;
+    
+}
+
+
+.entry-button:hover{
+    background-color: #1e9285;
+    box-shadow: rgba(0, 0, 0, 0.12) 0 1px 3px, rgba(0, 0, 0, 0.24) 0 1px 2px;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+/***---NAV BAR STYLES---***/
+
+/*Nav bar at the top of the screen*/
+.nav-bar{
+    align-items: center;
+    box-shadow: rgba(230, 229, 229, 1)0 7px 29px 0;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0.5rem;
+}
+
+/*Name style*/
+.nav-name{
+    margin-right: 1.5rem;
+}
+
+.nav-name:hover{
+    color:#1e9285;
+    cursor: pointer;
+}
+
+/*Profile picture*/
+.icon-menu{
+    border-radius:50px;
+    width: 3rem;
+    
+}
+
+
+.nav-bar .icon-menu:hover{
+    box-shadow: rgb(12, 117, 40) 0 5px 15px;
+    cursor: pointer;
+    transition: 0.1s ease;    
+}
+
+/***---MAIN CONTENT STYLES---***/
+
+/*Container with container graphs and sales card*/
+.main-content{ 
+    display: flex;   
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    margin-left: 15%;
+    width: 85%;
+}
+
+
+/*Container for sales card*/
+.stats{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 3%;
+    
+}
+
+
+/*For each sales card*/
+.sales-card{
+    border:2px solid #d5d8dd;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+    height: 100px;
+    margin: 1% 5%;
+    padding: 10px;
+    width: 190px;
+}
+
+.sales-card:hover{
+    background-color: #20bc9c;
+    border:2px solid #344b5c;
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+    
+}
+
+/*Card numbers styles*/
+.stats-numbers{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 30px;
+    font-weight:900;
+    margin: 0 0 10px 0; /*up,right,bottom,left*/
+}
+
+/*Card titles styles*/
+.stats-title{
+    color: #344b5c;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 15px;
+    margin: 0 0 10px 0; /*up,right,bottom,left*/
+}
+
+/*Card percentage styles*/
+.stats .stats-percentage{
+    color: #14534c;
+    display: flex;
+    font-weight: bold;
+    margin-top: 10px;
+ 
+}
+
+/*Card icons*/
+.sales-card .fa-2x{
+    margin-left: auto;
+}
+
+
+/*Container for tables and charts*/
+.tables{
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    gap:10px;
+    height: 100%;
+    margin: 0.2rem;
+    width: 100%;
+}
+
+
+/*Plot and pie chart container*/
+.tables-2{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 100%;
+    width: 100%;
+    
+}
+
+/*Bar chart styles*/
+.myChartbar{
+    border:2px solid #d5d8dd;
+    flex-grow: 1;
+    height: 100% ;
+    width: 100% ;
+}
+
+/*Pie chart*/
+.myChart2{
+    border:2px solid #d5d8dd;
+    flex-grow: 1;
+    height: 100% ;
+    width: 100% ;
+}
+
+/*Plot chart*/
+.myPlot2{
+    border:2px solid #d5d8dd;
+    flex-grow: 1;
+    height: 100% ;
+    width: 100% ;
+}
+
+/*--Container to order the main content container
+and the rigth nav container--*/
+
+.section-order{
+    display: flex;
+    width: 100%;
+    
+}
+
+/***---RIGTH NAV CONTAINER STYLES---***/
+.nav-notes{
+    display: flex;
+    flex-flow: column;
+    width: 20%;
+}
+
+
+/*Date styles*/
+.nav-notes .date{
+    border-bottom:2px solid #adacac;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+    color:#14534cc3;
+    font-weight: 200;
+    padding: 12px;
+}
+
+.nav-notes .date:hover{
+    color: #20bc9c;
+    cursor: pointer;
+}
+
+
+/*Headlines styles*/
+.headlines{
+    margin-top: 30px;
+    padding: 10px;
+    text-align: center;
+}
+
+.headlines:hover{
+    background-color: #eaeaea;
+    color: #20bc9c;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+
+.headlines .fa {
+    border: 2px solid  #d5d8dd;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+    margin-bottom: 12px;
+    padding: 12px;
+}
+
+
+.sales{
+    color: #f1bd6a;
+
+}
+.incoming{
+    color: #1e9285;
+}
+
+
+/* Responsive layout - makes a one column layout instead of a two-column layout */
+@media (max-width: 800px) {
+    .left-menu a {
+      font-size: 0;
+      
+    }
+    .left-menu a i {
+        font-size: 2rem;
+        text-align: left;
+    }
+
+    .section-order{
+        display:flex ;
+        flex-flow: column;
+    }
+
+    .nav-notes{
+        display: flex;
+        flex-flow: row;
+        font-size: 1rem;
+        gap: 10px;
+        margin: 0;
+        width: 100%;
+        
+    }
+
+    .nav-notes .date{
+        align-items: center;
+        display: flex;
+    }
+    
+  }
